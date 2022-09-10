@@ -6,6 +6,9 @@ import numpy as np
 
 from main_deepgram import *
 
+def main(self):
+    pass
+
 tokenizer = AutoTokenizer.from_pretrained('nlptown/bert-base-multilingual-uncased-sentiment')
 model = AutoModelForSequenceClassification.from_pretrained('nlptown/bert-base-multilingual-uncased-sentiment')
 
