@@ -6,8 +6,12 @@ import asyncio, json
 DEEPGRAM_API_KEY = 'e10348a742ae9dc36c7fea998a1ff4088f254c8d' #'294dad26b6f53b7ba9e4dd4a6b3eb48f3cac44a0'
 
 # Replace with your file path and audio mimetype
-PATH_TO_FILE = '/Users/sankalpbhatia/Dropbox/Mac/Desktop/GME_earnings_call.wav'
-MIMETYPE = 'audio/wav'
+try:
+    PATH_TO_FILE = 'GME_earnings_call.wav'
+    MIMETYPE = 'audio/wav'
+except:
+    PATH_TO_FILE = str(input("Drag the audio file or enter its pathname: \n"))
+    MIMETYPE = 'audio/wav'
 
 async def main():
     # Initializes the Deepgram SDK
